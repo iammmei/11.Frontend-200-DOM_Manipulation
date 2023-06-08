@@ -24,15 +24,13 @@
 
 // Loop through all the paragraphs and display their content in the console. If the paragraph has a class, display its classname as well
 
-let paragraph = document.querySelectorAll("p");
-let ptext = paragraph.innerText;
-console.log(ptext);
+let paragraphs = document.querySelectorAll("p");
+let paragraphsText = paragraphs.innerText;
+// console.log(paragraphsText);
 
-// let pclass = paragraph.classList;
-
-for (let i = 0; i < paragraph.length; i++) {
-  // console.log(paragraph);
-  if (paragraph[i].classList === true) {
-    console.log(paragraph.classList);
-  }
+for (let i = 0; i < paragraphs.length; i++) {
+  console.log(paragraphs[i])
+  // if (paragraphs[i].classList === true) {
+  //   console.log(paragraphs.classList);
+  // }
 }
