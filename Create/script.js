@@ -13,7 +13,7 @@
 addNew();
 //CALL THE FUNCTION!!!!
 function addNew() {
-  const learners = ["Safa", "John", "Emily", "Michael"]; // Replace with the names of your learners
+  const learners = ["Safa", "Camila", "Florentina", "Glaucielle", "Zuzanna "];
   const article = document.querySelector("article");
 
   learners.forEach(function (learner) {
@@ -21,7 +21,7 @@ function addNew() {
     const paragraph = document.createElement("p");
     const randomColor = getRandomColor();
 
-    section.style.backgroundColor = randomColor;
+    section.style.backgroundColor = randomColor;g
     paragraph.textContent = learner;
 
     section.appendChild(paragraph);
