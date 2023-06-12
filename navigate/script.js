@@ -18,7 +18,10 @@ console.log(section);
 
 const secondS = section[1];
 const thirdS = section[2];
+console.log(thirdS);
+const changedSection = thirdS.appendChild(secondS);
 
+changedSection.remove();
 const secondSchildren = secondS.children;
 const thirdSchildren = thirdS.children;
 console.log(secondSchildren);
@@ -30,6 +33,5 @@ console.log(h2);
 Sh2 = h2[1];
 Sh3 = h2[2];
 
-Sh3.appendChild(Sh2);
-
 // Delete the last section from the DOM, we don't need it anyways
+// changeS.remove();
