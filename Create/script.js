@@ -9,19 +9,19 @@
 //   section.appendChild(paragraph);
 //   document.body.appendChild(section);
 // }
-
-addNew();
+//addNew();
 //CALL THE FUNCTION!!!!
+
 function addNew() {
-  const learners = ["Safa", "Camila", "Florentina", "Glaucielle", "Zuzanna "];
-  const article = document.querySelector("article");
+  const learners = ["Safa", "Camila", "Florentina"]; // crée une array avec le nom des learner
+  const article = document.querySelector("article"); // selectionne les articles
 
   learners.forEach(function (learner) {
     const section = document.createElement("section");
     const paragraph = document.createElement("p");
     const randomColor = getRandomColor();
 
-    section.style.backgroundColor = randomColor;g
+    section.style.backgroundColor = randomColor;
     paragraph.textContent = learner;
 
     section.appendChild(paragraph);
