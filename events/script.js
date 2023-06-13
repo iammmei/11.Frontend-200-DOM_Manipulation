@@ -70,12 +70,17 @@ body.addEventListener("keypress", (event) => {
   if (event.key === " ") {
     document.body.style.background = getRandomColor();
   } else if (event.key === "l") {
-    console.log("nonono");
     let liElements = document.querySelectorAll("li");
     while (liElements.length > 0) {
       liElements[liElements.length - 1].remove();
       liElements.splice(1, liElements.length - 1);
     }
+  } else if (event.key === "s") {
+    let displayedsquare = document.querySelectorAll(".displayedsquare");
+
+    Array.from(displayedsquare).forEach((displayedsquare) => {
+      displayedsquare.parentNode.removeChild(displayedsquare);
+    });
   }
 });
 
@@ -90,6 +95,5 @@ function getRandomColor() {
   return color;
 }
 
-// When the l key is pressed the log gets deleted (erases the generated <li>s). Mind you: using a delete in a for loop might cause issues (as the amount of items to loop over changes), so a while loop might be a good choice instead.
-// When the s key is pressed the squares get deleted (erases the generated squares)
+
 // Create a system so that when a user clicks on a generated square an alert pops-up with the color of that square
