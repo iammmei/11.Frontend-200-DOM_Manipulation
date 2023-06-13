@@ -26,6 +26,7 @@ SquareGreen.addEventListener("click", () => {
   let newSquareGreen = document.createElement("div");
   newSquareGreen.classList.add("displayedsquare", "green");
   displayedWrapper.appendChild(newSquareGreen);
+  alert("Green");
 
   let newLi = document.createElement("li");
   endTime = new Date();
@@ -40,6 +41,7 @@ SquareMagenta.addEventListener("click", () => {
   let newSquareMagenta = document.createElement("div");
   newSquareMagenta.classList.add("displayedsquare", "violet");
   displayedWrapper.appendChild(newSquareMagenta);
+  alert("Violet");
 
   let newLi = document.createElement("li");
   endTime = new Date();
@@ -54,6 +56,7 @@ SquareOrange.addEventListener("click", () => {
   let newSquareOrange = document.createElement("div");
   newSquareOrange.classList.add("displayedsquare", "orange");
   displayedWrapper.appendChild(newSquareOrange);
+  alert("Orange");
 
   let newLi = document.createElement("li");
   endTime = new Date();
@@ -94,6 +97,5 @@ function getRandomColor() {
 
   return color;
 }
-
 
 // Create a system so that when a user clicks on a generated square an alert pops-up with the color of that square
