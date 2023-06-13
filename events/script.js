@@ -28,29 +28,23 @@ SquareGreen.addEventListener("click", () => {
   displayedWrapper.appendChild(newSquareGreen);
 
   let newLi = document.createElement("li");
-
   endTime = new Date();
   let timeLapse = getElapsedTime();
-  let message = "Square created. Time lapse: " + timeLapse + "ms";
+  let message = "Square created. Time lapse: " + timeLapse + "s";
   let textNode = document.createTextNode(message);
   newLi.appendChild(textNode);
   ul.appendChild(newLi);
 });
 
-// const clickOnSquare = (e) => {
-//     console.log(e.target.classList[1]);
-//     console.log(getElapsedTime());
-//   };
-
 SquareMagenta.addEventListener("click", () => {
   let newSquareMagenta = document.createElement("div");
   newSquareMagenta.classList.add("displayedsquare", "violet");
   displayedWrapper.appendChild(newSquareMagenta);
-  let newLi = document.createElement("li");
 
+  let newLi = document.createElement("li");
   endTime = new Date();
   let timeLapse = getElapsedTime();
-  let message = "Square created. Time lapse: " + timeLapse + "ms";
+  let message = "Square created. Time lapse: " + timeLapse + "s";
   let textNode = document.createTextNode(message);
   newLi.appendChild(textNode);
   ul.appendChild(newLi);
@@ -60,22 +54,42 @@ SquareOrange.addEventListener("click", () => {
   let newSquareOrange = document.createElement("div");
   newSquareOrange.classList.add("displayedsquare", "orange");
   displayedWrapper.appendChild(newSquareOrange);
-  let newLi = document.createElement("li");
 
+  let newLi = document.createElement("li");
   endTime = new Date();
   let timeLapse = getElapsedTime();
-  let message = "Square created. Time lapse: " + timeLapse + "ms";
+  let message = "Square created. Time lapse: " + timeLapse + "s";
   let textNode = document.createTextNode(message);
   newLi.appendChild(textNode);
   ul.appendChild(newLi);
 });
 
-//quand c une variable dans append child pas besoin de guillemets
+const body = document.querySelector("body");
+body.addEventListener("keypress", (event) => {
+  console.log("hello");
+  if (event.key === " ") {
+    document.body.style.background = getRandomColor();
+  } else if (event.key === "l") {
+    console.log("nonono");
+    let liElements = document.querySelectorAll("li");
+    while (liElements.length > 0) {
+      liElements[liElements.length - 1].remove();
+      liElements.splice(1, liElements.length - 1);
+    }
+  }
+});
 
-//code a executer quand on appuyer sur square green, CREATE ELEMENT crééer une variable lets new square , l'append le rajouter dans le dom + rajouter class
-//event pour chaque couleur
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
 
-//on click le carré a été appuyé event listener dans ul
-// selectionner la section ou vont apparaitre les nouveau carrés
-//on click créer une variable  classe+ div append dans la partie haute
-//quand j'appuye nouvelle div correspondant à la couleur et action log
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
+}
+
+// When the l key is pressed the log gets deleted (erases the generated <li>s). Mind you: using a delete in a for loop might cause issues (as the amount of items to loop over changes), so a while loop might be a good choice instead.
+// When the s key is pressed the squares get deleted (erases the generated squares)
+// Create a system so that when a user clicks on a generated square an alert pops-up with the color of that square
