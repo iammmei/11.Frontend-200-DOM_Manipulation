@@ -116,6 +116,28 @@ let collection = [
 console.log(collection);
 const animeContainer = document.querySelector(".anime_container");
 
+// const title = document.createElement("h2");
+// title.classList.add("name");
+// title.innerHTML = nameValue;
+const header = document.createElement("header");
+header.classList.add("header");
+
+const MyCollection = document.createElement("h2");
+MyCollection.innerText = "Safa's Collection";
+
+const paragraph = document.createElement("p");
+paragraph.innerText = "blablabla";
+
+const img = document.createElement("img");
+img.setAttribute("src", "shojo.jpg");
+const hr = document.createElement("hr");
+
+header.appendChild(MyCollection);
+header.appendChild(paragraph);
+header.appendChild(img);
+header.appendChild(hr);
+document.body.insertBefore(header, animeContainer);
+
 const displayCollection = (
   imageValue,
   nameValue,
