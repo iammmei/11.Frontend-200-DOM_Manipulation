@@ -30,7 +30,7 @@ let collection = [
       "When her newly-built home is razed to the ground by an earthquake, low-achieving, clumsy, and troublesome third-year high school student Kotoko Aihara is forced to share a roof with the school's—and possibly Japan's—smartest student, Naoki Irie. Kotoko is not actually a complete stranger to Irie-kun; unfortunately, a single love letter that she tried to give him in the past has already sealed her fate as far as he is concerned. Throw in some quirky friends and a meddlesome mother, and Kotoko might not even have a snowball's chance in hell of winning the older Irie boy's heart. Yet Kotoko remains optimistic that, because she now lives in his house, her unattainable crush on the genius since the beginning of high school has never been more within reach.",
   },
   {
-    image: "kamikaekaito.jpg",
+    image: "kamikazekaito.jpg",
     name: "Kamikaze Kaito Jeanne",
     releaseDate: 1999,
     genres: ["Action", "Drama", "Mystery", "Romance", "Supernatural"],
@@ -50,7 +50,7 @@ let collection = [
       "Sakura Kinomoto, a regular fourth-grade student in Tomoeda, stumbles upon a mysterious book called 'The Clow' filled with magical cards. Unintentionally, she scatters the cards throughout the town, triggering the awakening of Keroberos, also known as Kero, the Beast of the Seal. Kero informs Sakura that these cards, known as the Clow Cards, were created by the powerful sorcerer Clow Reed and had been sealed away due to their dangerous abilities. Now that the Clow Cards are free, Sakura is appointed as the Cardcaptor and entrusted with the Sealed Key by Kero. Her mission is to locate and recapture all the cards before they bring harm to the world. With the support of her best friend Tomoyo Daidouji and Kero's guidance, Sakura must balance her newfound responsibilities as the Cardcaptor with her everyday life.",
   },
   {
-    image: "vampirej.jpe",
+    image: "vampirek.jpe",
     name: "Vampire Knight",
     releaseDate: 2008,
     genres: ["Drama", "Mystery", "Romance", "Supernatural"],
@@ -114,7 +114,7 @@ let collection = [
 ];
 
 console.log(collection);
-const animeContainer = document.querySelector("anime_container");
+const animeContainer = document.querySelector(".anime_container");
 
 const displayCollection = (
   imageValue,
@@ -128,56 +128,56 @@ const displayCollection = (
   const card = document.createElement("div");
   card.classList.add("card");
 
-  // const a = document.createElement("a");
-  // a.setAttribute("href")
-
-  const genres = document.createElement("div");
-  genres.classList.add("genres");
-  genres.innerHTML = genresValue;
-
   const img = document.createElement("img");
   img.setAttribute("src", imageValue);
 
-  const name = document.createElement("h2");
+  const title = document.createElement("h2");
   title.classList.add("name");
   title.innerHTML = nameValue;
 
-  const synopsis = document.createElement("div");
-  synopsis.classList.add("synopsis");
-  synopsis.innerHTML = synopsisValue;
+  const releaseDate = document.createElement("div");
+  releaseDate.classList.add("release_date");
+  releaseDate.innerHTML = "Release Date: " + releaseDateValue;
+
+  const genres = document.createElement("div");
+  genres.classList.add("genres");
+  genres.innerHTML = "Genres: " + genresValue.join(", ");
 
   const author = document.createElement("div");
   author.classList.add("author");
-  author.innerHTML = authorValue;
-
-  const releaseDate = document.createElement("div");
-  releaseDate.classList.add("episodes");
-  releaseDate.innerHTML = releaseDateValue;
+  author.innerHTML = "Author: " + authorValue;
 
   const episodes = document.createElement("div");
   episodes.classList.add("episodes");
-  episodes.innerHTML = episodesValue;
+  episodes.innerHTML = "Episodes: " + episodesValue;
 
-  //Appending
+  const synopsis = document.createElement("div");
+  synopsis.classList.add("synopsis");
+  synopsis.innerHTML = "Synopsis: " + synopsisValue;
+
+  // Appending
   animeContainer.appendChild(card);
-  card.appendChild(image);
-  img.appendChild(name);
-  name.appendChild(releaseDate);
-  releaseDate.appendChild(genres);
-  genres.appendChild(author);
-  author.appendChild(episodes);
-  episodes.appendChild(synopsis);
-
-const collectiondata = () =>
-{
-  collection.forEach((e)
-  displayCollection(e.image,e.name,e.releaseDate,e.genres,e.author,e.episodes,e.synopsis)
-
-});
-
-
-
+  card.appendChild(img);
+  card.appendChild(title);
+  card.appendChild(releaseDate);
+  card.appendChild(genres);
+  card.appendChild(author);
+  card.appendChild(episodes);
+  card.appendChild(synopsis);
 };
 
+const collectionData = () => {
+  collection.forEach((e) =>
+    displayCollection(
+      e.image,
+      e.name,
+      e.releaseDate,
+      e.genres,
+      e.author,
+      e.episodes,
+      e.synopsis
+    )
+  );
+};
 
-collectiondata()
+collectionData();
