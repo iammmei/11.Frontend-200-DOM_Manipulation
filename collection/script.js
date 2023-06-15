@@ -20,7 +20,7 @@ let collection = [
       "Two ostensibly opposite women, both named Nana, meet on a train going to Tokyo and grow inseparable. Nana Osaki, a determined and talented punk rock vocalist, dreams of becoming a successful rock star. On the other hand, the other Nana, nicknamed Hachi, is a bubbly and naive girl who falls in love easily. Despite their contrasting personalities, as they navigate the challenges of adulthood, including love, friendship, and pursuing their dreams in Tokyo.",
   },
   {
-    image:"Itazura.na.Kiss..jpg",
+    image: "Itazura.na.Kiss..jpg",
     name: "Itazura Na Kiss",
     releaseDate: 2008,
     genres: ["Comedy", "Romance"],
@@ -50,7 +50,7 @@ let collection = [
       "Sakura Kinomoto, a regular fourth-grade student in Tomoeda, stumbles upon a mysterious book called 'The Clow' filled with magical cards. Unintentionally, she scatters the cards throughout the town, triggering the awakening of Keroberos, also known as Kero, the Beast of the Seal. Kero informs Sakura that these cards, known as the Clow Cards, were created by the powerful sorcerer Clow Reed and had been sealed away due to their dangerous abilities. Now that the Clow Cards are free, Sakura is appointed as the Cardcaptor and entrusted with the Sealed Key by Kero. Her mission is to locate and recapture all the cards before they bring harm to the world. With the support of her best friend Tomoyo Daidouji and Kero's guidance, Sakura must balance her newfound responsibilities as the Cardcaptor with her everyday life.",
   },
   {
-    image :"vampirej.jpe",
+    image: "vampirej.jpe",
     name: "Vampire Knight",
     releaseDate: 2008,
     genres: ["Drama", "Mystery", "Romance", "Supernatural"],
@@ -60,7 +60,7 @@ let collection = [
       "The earliest thing Yuki Cross remembers is being attacked on a snowy night by a vampire and being rescued by Kaname Kuran, who is also a vampire. The story takes place 10 years after that event. Yuki is now the adopted daughter of the Headmaster of Cross Academy. She and her longtime friend Zero Kiryu keep peace at the academy, making sure no problems arise between the Day Class (humans) and the Night Class (vampires). However, the peace they try to keep is fragile, and personal feelings begin to interrupt their duty.",
   },
   {
-    image: "doremi.jpg" ,
+    image: "doremi.jpg",
     name: "Magical DoReMi",
     releaseDate: 1999,
     genres: ["Comedy", "Fantasy"],
@@ -80,7 +80,7 @@ let collection = [
       "Years ago, a tragic incident befell a young princess when both her parents died. Devastated, it seemed nothing would calm this poor soul. However, a prince traveling through the area came to see the princess, hoping to cheer her up. After wiping her sorrowful tears, the prince gave her a ring carrying a rose emblem and told her as long as she holds onto the ring, they are destined to meet again. The event leaves a deep impression on the girl, Utena Tenjou, leading her to become a prince herself. Years later, Utena attends Ootori Academy, recognized by the same rose emblem as her precious ring's. There, attracted by the scent of roses, she witnesses Anthy Himemiya tending the flowers, accompanied by the Student Council President Touga Kiryuu and Vice President Kyouichi Saionji, who seem to be arguing over Anthy. Subsequently, a misunderstanding leads to Utena being dragged into the world of Duelists—those with rings similar to her own. The Duelists fight for the ownership of the Rose Bride, Anthy Himemiya, who is said to possess great power. Wanting to prove her capabilities as a prince and enraged that Anthy is being wronged and objectified, Utena resolves to fight against the Duelists to save her from the cruel fate.",
   },
   {
-    image : "fushigiyugi.jpg",
+    image: "fushigiyugi.jpg",
     name: "Fushigi Yûgi",
     releaseDate: 1995,
     genres: ["Adventure", "Fantasy", "Romance"],
@@ -90,7 +90,7 @@ let collection = [
       "During a visit to the National Library, Miaka Yuuki and Yui Hongo stumble upon a strange old book that casts a red light, sucking them inside its unfamiliar world. Upon arrival, the two encounter hostile slave traders and barely escape with the help of Tamahome—a powerful young man bearing a Chinese symbol on his forehead. But, a moment later, the red light returns and takes Yui away. Desperate to reunite with her companion, Miaka asks Tamahome for assistance. However, the situation escalates when the pair encounters the land's emperor, Hotohori, who believes Miaka is the foretold priestess of the kingdom's protector god Suzaku. By gathering the god's seven Celestial Warriors, the priestess can summon Suzaku and have all her wishes granted. Hotohori hopes this will save his country, and since it appears to be a fitting solution to the girl's problems as well, he convinces her to accept the role.",
   },
   {
-    image : "paradisekiss.jpg"
+    image: "paradisekiss.jpg",
     name: "Paradise Kiss",
     releaseDate: 2005,
     genres: ["Drama", "Romance"],
@@ -114,3 +114,70 @@ let collection = [
 ];
 
 console.log(collection);
+const animeContainer = document.querySelector("anime_container");
+
+const displayCollection = (
+  imageValue,
+  nameValue,
+  releaseDateValue,
+  genresValue,
+  authorValue,
+  episodesValue,
+  synopsisValue
+) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  // const a = document.createElement("a");
+  // a.setAttribute("href")
+
+  const genres = document.createElement("div");
+  genres.classList.add("genres");
+  genres.innerHTML = genresValue;
+
+  const img = document.createElement("img");
+  img.setAttribute("src", imageValue);
+
+  const name = document.createElement("h2");
+  title.classList.add("name");
+  title.innerHTML = nameValue;
+
+  const synopsis = document.createElement("div");
+  synopsis.classList.add("synopsis");
+  synopsis.innerHTML = synopsisValue;
+
+  const author = document.createElement("div");
+  author.classList.add("author");
+  author.innerHTML = authorValue;
+
+  const releaseDate = document.createElement("div");
+  releaseDate.classList.add("episodes");
+  releaseDate.innerHTML = releaseDateValue;
+
+  const episodes = document.createElement("div");
+  episodes.classList.add("episodes");
+  episodes.innerHTML = episodesValue;
+
+  //Appending
+  animeContainer.appendChild(card);
+  card.appendChild(image);
+  img.appendChild(name);
+  name.appendChild(releaseDate);
+  releaseDate.appendChild(genres);
+  genres.appendChild(author);
+  author.appendChild(episodes);
+  episodes.appendChild(synopsis);
+
+const collectiondata = () =>
+{
+  collection.forEach((e)
+  displayCollection(e.image,e.name,e.releaseDate,e.genres,e.author,e.episodes,e.synopsis)
+
+});
+
+
+
+};
+
+
+collectiondata()
