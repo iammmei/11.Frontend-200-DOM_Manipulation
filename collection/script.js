@@ -114,30 +114,38 @@ let collection = [
 ];
 
 console.log(collection);
+// Selecting the element with class "anime_container"
 const animeContainer = document.querySelector(".anime_container");
 
-// const title = document.createElement("h2");
-// title.classList.add("name");
-// title.innerHTML = nameValue;
+// Creating a header element
 const header = document.createElement("header");
 header.classList.add("header");
 
+// Creating an h2 element for the title of the collection
 const MyCollection = document.createElement("h2");
 MyCollection.innerText = "Safa's Collection";
 
+// Creating a paragraph element
 const paragraph = document.createElement("p");
 paragraph.innerText = "blablabla";
 
+// Creating an img element
 const img = document.createElement("img");
 img.setAttribute("src", "shojo.jpg");
+
+// Creating an hr element
 const hr = document.createElement("hr");
 
+// Appending the elements to the header
 header.appendChild(MyCollection);
 header.appendChild(paragraph);
 header.appendChild(img);
 header.appendChild(hr);
+
+// Inserting the header before the animeContainer in the document body
 document.body.insertBefore(header, animeContainer);
 
+// Function to display a collection item
 const displayCollection = (
   imageValue,
   nameValue,
@@ -147,37 +155,45 @@ const displayCollection = (
   episodesValue,
   synopsisValue
 ) => {
+  // Creating a div element for the card
   const card = document.createElement("div");
   card.classList.add("card");
 
+  // Creating an img element for the collection item image
   const img = document.createElement("img");
   img.setAttribute("src", imageValue);
 
+  // Creating an h2 element for the collection item name
   const title = document.createElement("h2");
   title.classList.add("name");
   title.innerHTML = nameValue;
 
+  // Creating a div element for the release date
   const releaseDate = document.createElement("div");
   releaseDate.classList.add("release_date");
   releaseDate.innerHTML = "Release Date: " + releaseDateValue;
 
+  // Creating a div element for the genres
   const genres = document.createElement("div");
   genres.classList.add("genres");
   genres.innerHTML = "Genres: " + genresValue.join(", ");
 
+  // Creating a div element for the author
   const author = document.createElement("div");
   author.classList.add("author");
   author.innerHTML = "Author: " + authorValue;
 
+  // Creating a div element for the episodes
   const episodes = document.createElement("div");
   episodes.classList.add("episodes");
   episodes.innerHTML = "Episodes: " + episodesValue;
 
+  // Creating a div element for the synopsis
   const synopsis = document.createElement("div");
   synopsis.classList.add("synopsis");
   synopsis.innerHTML = "Synopsis: " + synopsisValue;
 
-  // Appending
+  // Appending the elements to the card
   animeContainer.appendChild(card);
   card.appendChild(img);
   card.appendChild(title);
@@ -188,7 +204,9 @@ const displayCollection = (
   card.appendChild(synopsis);
 };
 
+// Function to populate the collection data
 const collectionData = () => {
+  // Looping through each item in the collection array
   collection.forEach((e) =>
     displayCollection(
       e.image,
@@ -202,4 +220,5 @@ const collectionData = () => {
   );
 };
 
+// Calling the collectionData function to populate the collection
 collectionData();
