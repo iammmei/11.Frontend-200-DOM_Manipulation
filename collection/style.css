@@ -2,21 +2,32 @@
   margin: 0;
   padding: 0;
 }
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(244, 234, 243);
+  background-image: url("girlyback.jpg");
+}
 
 /* HEADER ELEMENTS */
 header {
   margin: 50px;
   padding: 5px;
+  margin-bottom: 150px;
 }
 header h2 {
   padding: 20px;
+  margin-left: 400px;
 }
 header p {
   padding: 15px;
+  margin-left: 400px;
 }
 header img {
   padding: 15px;
   border-radius: 50px;
+  margin-left: 100px;
+  float: left;
 }
 
 /* ANIME CONTAINER */

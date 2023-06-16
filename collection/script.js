@@ -127,20 +127,23 @@ MyCollection.innerText = "Safa's Collection";
 
 // Creating a paragraph element
 const paragraph = document.createElement("p");
-paragraph.innerText = "blablabla";
+paragraph.innerText = `
+Welcome to my enchanting world of shojo anime!
+ Step into a realm filled with captivating tales that have accompanied me since my childhood.
+  Within this collection, you'll discover a treasure trove of romantic adventures, magical encounters, and delightful clichés. However, alongside the whimsical journeys, you'll also encounter stories that offer a more realistic perspective and valuable life lessons.
+
+Embark on a magical journey through my shojo anime collection, where dreams come alive and emotions intertwine. Join me as we delve into the heartfelt narratives, vibrant characters, and captivating artistry that define the genre.
+
+Welcome to my magical collection, where the allure of shojo anime awaits your discovery.`;
 
 // Creating an img element
 const img = document.createElement("img");
 img.setAttribute("src", "shojo.jpg");
 
-// Creating an hr element
-const hr = document.createElement("hr");
-
 // Appending the elements to the header
+header.appendChild(img);
 header.appendChild(MyCollection);
 header.appendChild(paragraph);
-header.appendChild(img);
-header.appendChild(hr);
 
 // Inserting the header before the animeContainer in the document body
 document.body.insertBefore(header, animeContainer);
