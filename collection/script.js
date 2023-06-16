@@ -138,7 +138,7 @@ Welcome to my magical collection, where the allure of shojo anime awaits your di
 
 // Creating an img element
 const img = document.createElement("img");
-img.setAttribute("src", "shojo.jpg");
+img.setAttribute("src", "cool.jpg");
 
 // Appending the elements to the header
 header.appendChild(img);
