@@ -74,6 +74,7 @@ header img {
   font-family: "Montserrat", sans-serif;
   box-shadow: 5px 3px 12px #d2c7bb;
   border: 3px #c3dbc6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .synopsis {
   display: block;
@@ -95,6 +96,8 @@ header img {
 .author,
 .episodes {
   display: none;
+  margin: 10px;
+  margin-left: 15px;
 }
 .card img {
   align-items: center;
@@ -108,4 +111,19 @@ header img {
   font-size: 20px;
   margin-left: 15px;
   color: #d2c7bb;
+}
+
+.card:hover {
+  transform: scale(1.1);
+
+  .synopsis,
+  .genres,
+  .release_date,
+  .author,
+  .episodes {
+    display: block;
+    border: 30px;
+  }
+
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
