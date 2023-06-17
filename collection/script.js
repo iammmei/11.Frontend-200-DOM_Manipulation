@@ -11,7 +11,7 @@ let collection = [
   },
   {
     image: "NANA.jpg",
-    name: "Nana",
+    name: "NANA",
     releaseDate: 2006,
     genres: ["Award Winning", "Drama", "Romance"],
     author: "Ai Yazawa",
@@ -71,7 +71,7 @@ let collection = [
   },
   {
     image: "utena.jpg",
-    name: "Princess Utena",
+    name: "Revolutionary Girl Utena",
     releaseDate: 1997,
     genres: ["Award Winning", "Comedy", "Drama", "Fantasy", "Mystery"],
     author: "Chiho Saito",
@@ -107,9 +107,9 @@ let collection = [
     author: "Peach-Pit",
     episodes: 51,
     synopsis: `Amu Hinamori is a student at Seiyo Academy, where she has a reputation for being 'cool and spicy'; however, her real personality is that of an extremely shy and easily intimidated girl. One day, she wakes up to find three mysterious eggs in her bed, which hatch into Shugo Chara, these guardian characters represent different aspects of Amu's true personality.
-      Amu discovers that she is a Guardian Apprentice and is tasked with a mission to save the X Eggs. These eggs are the result of people's dreams and desires turning negative, causing them to lose hope and become trapped in their own insecurities. 
-      
-      As Amu embraces her role, she forms the Seiyo Elementary's Guardians, a group dedicated to protecting dreams and happiness. Alongside her Shugo Charas and newfound friends, she embarks on a quest to find the X Eggs and purify them. `,
+        Amu discovers that she is a Guardian Apprentice and is tasked with a mission to save the X Eggs. These eggs are the result of people's dreams and desires turning negative, causing them to lose hope and become trapped in their own insecurities. 
+        
+        As Amu embraces her role, she forms the Seiyo Elementary's Guardians, a group dedicated to protecting dreams and happiness. Alongside her Shugo Charas and newfound friends, she embarks on a quest to find the X Eggs and purify them. `,
   },
 ];
 
@@ -138,7 +138,7 @@ Welcome to my magical collection, where the allure of shojo anime awaits your di
 
 // Creating an img element
 const img = document.createElement("img");
-img.setAttribute("src", "cool.jpg");
+img.setAttribute("src", "original.jpg");
 
 // Appending the elements to the header
 header.appendChild(img);
