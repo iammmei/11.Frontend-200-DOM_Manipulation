@@ -64,6 +64,7 @@ header img {
   justify-content: center;
   margin-left: 30px;
   margin-right: 30px;
+  position: relative;
 }
 .card {
   flex-basis: 15%;
@@ -75,6 +76,7 @@ header img {
   box-shadow: 5px 3px 12px #d2c7bb;
   border: 3px #c3dbc6;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: static;
 }
 .synopsis {
   display: block;
@@ -115,15 +117,26 @@ header img {
 
 .card:hover {
   transform: scale(1.1);
-
   .synopsis,
   .genres,
   .release_date,
   .author,
   .episodes {
     display: block;
-    border: 30px;
   }
 
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  border-radius: 16px;
+}
+
+.card:not(:hover) {
+  transform: scale(1);
 }
