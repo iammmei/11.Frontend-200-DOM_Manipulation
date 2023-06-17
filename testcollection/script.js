@@ -128,29 +128,6 @@ MyCollection.innerText = "Safa's Collection";
 // Creating a paragraph element
 const paragraph = document.createElement("p");
 paragraph.innerText = `
-  Welcome to my enchanting world of shojo anime!
-   Step into a realm filled with captivating tales that have accompanied me since my childhood.
-    Within this collection, you'll discover a treasure trove of romantic adventures, magical encounters, and delightful clichés. However, alongside the whimsical journeys, you'll also encounter stories that offer a more realistic perspective and valuable life lessons.
-  
-  Embark on a magical journey through my shojo anime collection, where dreams come alive and emotions intertwine. Join me as we delve into the heartfelt narratives, vibrant characters, and captivating artistry that define the genre.
-  
-  Welcome to my magical collection, where the allure of shojo anime awaits your discovery.`;
-
-console.log(collection);
-// Selecting the element with class "anime_container"
-const animeContainer = document.querySelector(".anime_container");
-
-// Creating a header element
-const header = document.createElement("header");
-header.classList.add("header");
-
-// Creating an h2 element for the title of the collection
-const MyCollection = document.createElement("h2");
-MyCollection.innerText = "Safa's Collection";
-
-// Creating a paragraph element
-const paragraph = document.createElement("p");
-paragraph.innerText = `
 Welcome to my enchanting world of shojo anime!
  Step into a realm filled with captivating tales that have accompanied me since my childhood.
   Within this collection, you'll discover a treasure trove of romantic adventures, magical encounters, and delightful clichés. However, alongside the whimsical journeys, you'll also encounter stories that offer a more realistic perspective and valuable life lessons.
@@ -161,7 +138,7 @@ Welcome to my magical collection, where the allure of shojo anime awaits your di
 
 // Creating an img element
 const img = document.createElement("img");
-img.setAttribute("src", "cool.jpg");
+img.setAttribute("src", "original.jpg");
 
 // Appending the elements to the header
 header.appendChild(img);
