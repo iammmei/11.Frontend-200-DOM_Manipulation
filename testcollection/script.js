@@ -11,7 +11,7 @@ let collection = [
   },
   {
     image: "NANA.jpg",
-    name: "Nana",
+    name: "NANA",
     releaseDate: 2006,
     genres: ["Award Winning", "Drama", "Romance"],
     author: "Ai Yazawa",
@@ -71,7 +71,7 @@ let collection = [
   },
   {
     image: "utena.jpg",
-    name: "Princess Utena",
+    name: "Revolutionary Girl Utena",
     releaseDate: 1997,
     genres: ["Award Winning", "Comedy", "Drama", "Fantasy", "Mystery"],
     author: "Chiho Saito",

@@ -8,8 +8,8 @@
 body {
   height: 100vh;
   width: 100%;
-  
- /* background-color: rgb(250, 253, 222);*/
+
+  /* background-color: rgb(250, 253, 222);*/
 }
 
 /* HEADER ELEMENTS */
@@ -76,7 +76,7 @@ img {
 /* CARDS */
 
 .card {
-  background: rgba(159, 200, 236, 0.47);
+  background: rgba(212, 232, 250, 0.47);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
